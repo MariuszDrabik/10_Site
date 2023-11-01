@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "new-www"
+version = "0.1.0"
+description = ""
+authors = ["Mariusz Drabik <drabik.mariusz@gmail.com>"]
+readme = "README.md"
+packages = [{include = "new_www"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.104.1"
+uvicorn = "^0.23.2"
+sqlalchemy = "^2.0.22"
+pydantic-settings = "^2.0.3"
+pycodestyle = "^2.11.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

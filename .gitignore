@@ -1,0 +1,10 @@
+.vscode
+__pycache__
+local_pgdata
+pgadmin-data
+db_config.py
+pg_database
+/pg_database
+.env
+db_pgdata
+
