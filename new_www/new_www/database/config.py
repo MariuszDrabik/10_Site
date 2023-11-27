@@ -18,7 +18,10 @@ class Settings(BaseSettings):
     POSTGRES_HOST: ClassVar[str] = os.getenv("POSTGRES_HOST")
     POSTGRES_HOSTNAME: ClassVar[str] = os.getenv("POSTGRES_HOSTNAME")
     PGADMIN_DEFAULT_EMAIL: ClassVar[str] = os.getenv("PGADMIN_DEFAULT_EMAIL")
-    PGADMIN_DEFAULT_PASSWORD: ClassVar[str] = os.getenv("PGADMIN_DEFAULT_PASSWORD")
+    PGADMIN_DEFAULT_PASSWORD: ClassVar[str] = os.getenv(
+        "PGADMIN_DEFAULT_PASSWORD"
+    )
+    UNIQUE: ClassVar[str] = "dvfdobfdonib"
 
 
 settings = Settings()

@@ -1,35 +1,33 @@
 import logging
 from typing import Dict
-from fastapi import APIRouter, FastAPI, Request, Response
-from fastapi.staticfiles import StaticFiles
 import uvicorn
+from fastapi import APIRouter, FastAPI
+from fastapi.staticfiles import StaticFiles
 from conf_dirs import ROOT_DIR
-from database.config import settings, oko
-
-# from database.config import settings
+from database.config import settings
+from database.database import POSTGRES_URL
+from users import user_routers
 
 app = FastAPI()
 
 app.mount(
-    f"/static",
+    "/static",
     StaticFiles(directory=f"{ROOT_DIR}/static"),
     name="static",
 )
 router = APIRouter()
 
+app.include_router(user_routers.router)
+
 
 @app.get("/")
-async def root(oko_id: str | None = None, ne: str | None = None) -> Dict[str, str]:
-    print(settings.POSTGRES_HOSTNAME)
+async def health_checker(test: str = "", test_2: str = "") -> Dict[str, str]:
+    print(POSTGRES_URL)
     print(settings.POSTGRES_HOST)
-    # breakpoint()
-    oko()
-    return {f"message": f"Hello from FastAPI {ne or ''} {oko_id}"}
+    return {"message": f"Hello from FastAPI {test_2 or ''} {test}"}
 
 
 if __name__ == "__main__":
-    import uvicorn
-
     uvicorn.run(
         "main:app",
         host="0.0.0.0",

@@ -1,0 +1,116 @@
+ INFO     [2023-11-26 19:54:07,378][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 19:54:07,386][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 19:55:43,347][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 19:55:43,358][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 19:55:54,605][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 19:55:54,617][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 19:56:03,774][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 19:56:03,785][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 19:58:36,723][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 19:58:36,733][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:00:39,333][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:00:39,344][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:03:27,272][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:03:27,283][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:06:28,071][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:06:28,134][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:12:06,503][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:12:06,512][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:42,414][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:42,421][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:43,659][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:43,661][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:44,219][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:44,221][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:44,397][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:44,399][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:44,564][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:44,566][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:44,743][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:44,744][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:44,911][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:44,913][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:45,073][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:45,074][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:45,223][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:45,224][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:45,396][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:45,397][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:45,552][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:45,554][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:45,710][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:45,712][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:46,022][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:46,024][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:46,158][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:46,160][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:46,311][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:46,314][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:46,470][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:46,503][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:46,641][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:46,644][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:46,816][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:46,819][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:46,964][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:46,965][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:47,143][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:47,144][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:47,304][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:47,305][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:47,457][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:47,459][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:47,618][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:47,620][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:16:47,780][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:16:47,782][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:22:01,585][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:22:01,596][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:31:30,289][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:31:30,323][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:36:03,591][user_routers.user_routers.py 20]  Log informacjom 
+ DEBUG    [2023-11-26 20:36:03,592][user_routers.user_routers.py 21]  A to debug 
+ INFO     [2023-11-26 20:54:37,246][user_routers.user_routers.py 28]  Posy user name='aaaa' email='bbbb' password='oko' 
+ DEBUG    [2023-11-26 20:54:37,254][user_routers.user_routers.py 29]  A to debug 
+ INFO     [2023-11-26 20:56:21,638][user_routers.user_routers.py 28]  Posy user name='aaaa' email='bbbb' password='oko' 
+ DEBUG    [2023-11-26 20:56:21,648][user_routers.user_routers.py 29]  A to debug 
+ INFO     [2023-11-26 20:57:42,580][user_routers.user_routers.py 28]  Post user name='aaaa' email='bbbb' password='oko' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 20:57:42,588][user_routers.user_routers.py 29]  A to debug 
+ INFO     [2023-11-26 20:57:51,055][user_routers.user_routers.py 28]  Post user name='aaaa' email='bbbb' password='oko' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 20:57:51,057][user_routers.user_routers.py 29]  A to debug 
+ INFO     [2023-11-26 20:57:56,929][user_routers.user_routers.py 28]  Post user name='aaaa' email='bbbb' password='oko' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 20:57:56,932][user_routers.user_routers.py 29]  A to debug 
+ INFO     [2023-11-26 20:57:57,949][user_routers.user_routers.py 28]  Post user name='aaaa' email='bbbb' password='oko' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 20:57:57,951][user_routers.user_routers.py 29]  A to debug 
+ INFO     [2023-11-26 20:57:58,861][user_routers.user_routers.py 28]  Post user name='aaaa' email='bbbb' password='oko' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 20:57:58,862][user_routers.user_routers.py 29]  A to debug 
+ INFO     [2023-11-26 21:04:52,120][user_routers.user_routers.py 28]  Post user description=None name='aaaa' email='bbbb' password='oko' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 21:04:52,128][user_routers.user_routers.py 29]  A to debug 
+ INFO     [2023-11-26 21:07:55,239][user_routers.user_routers.py 28]  Post user id=None name='aaaa' email='bbbb' password='oko' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 21:07:55,249][user_routers.user_routers.py 29]  A to debug 
+ INFO     [2023-11-26 21:10:48,621][user_routers.user_routers.py 28]  Post user id=None name='aaaa' email='bbbb' password='oko' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 21:10:48,629][user_routers.user_routers.py 29]  A to debug 
+ INFO     [2023-11-26 21:11:09,014][user_routers.user_routers.py 28]  Post user id=None name='aaaa' email='bbbb' password='oko' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 21:11:09,016][user_routers.user_routers.py 29]  A to debug 
+ INFO     [2023-11-26 21:12:15,786][user_routers.user_routers.py 30]  Post user id=None name='aaaa' email='bbbb' password='oko' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 21:12:15,796][user_routers.user_routers.py 31]  A to debug 
+ INFO     [2023-11-26 21:12:17,807][user_routers.user_routers.py 30]  Post user id=None name='aaaa' email='bbbb' password='oko' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 21:12:17,809][user_routers.user_routers.py 31]  A to debug 
+ INFO     [2023-11-26 21:13:32,161][user_routers.user_routers.py 30]  Post user id=None name='aaaa' email='bbbb' password='oko' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 21:13:32,172][user_routers.user_routers.py 31]  A to debug 
+ INFO     [2023-11-26 21:13:33,973][user_routers.user_routers.py 30]  Post user id=None name='aaaa' email='bbbb' password='oko' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 21:13:33,974][user_routers.user_routers.py 31]  A to debug 
+ INFO     [2023-11-26 21:14:58,338][user_routers.user_routers.py 30]  Post user id=None name='aaaa' email='bbbb' password='8456465' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 21:14:58,345][user_routers.user_routers.py 31]  A to debug 
+ INFO     [2023-11-26 21:15:35,375][user_routers.user_routers.py 30]  Post user id=None name='aaaa' email='bbbb' password='8456465' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 21:15:35,386][user_routers.user_routers.py 31]  A to debug 
+ INFO     [2023-11-26 21:16:02,933][user_routers.user_routers.py 30]  Post user id=None name='aaaa' email='bbbb' password='8456465' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 21:16:02,935][user_routers.user_routers.py 31]  A to debug 
+ INFO     [2023-11-26 22:18:54,579][user_routers.user_routers.py 30]  Post user id=None name='aaaa' email='bbbb' password='8456465' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 22:18:54,588][user_routers.user_routers.py 31]  A to debug 
+ INFO     [2023-11-26 23:06:44,604][user_routers.user_routers.py 30]  Post user id=None name='aaaa' email='bbbb' password='8456465' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 23:06:44,612][user_routers.user_routers.py 31]  A to debug 
+ INFO     [2023-11-26 23:13:08,495][user_routers.user_routers.py 30]  Post user id=None login='ccc' name='aaaa' email='bbbb' password='8456465' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 23:13:08,503][user_routers.user_routers.py 31]  A to debug 
+ INFO     [2023-11-26 23:32:57,181][user_routers.user_routers.py 30]  Post user id=None login='ccc' name='aaaa' email='bbbb' password='8456465' <class 'users.user_schema.UserSchema'> 
+ DEBUG    [2023-11-26 23:32:57,189][user_routers.user_routers.py 31]  A to debug 
