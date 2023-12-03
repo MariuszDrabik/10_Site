@@ -21,7 +21,6 @@ class Settings(BaseSettings):
     PGADMIN_DEFAULT_PASSWORD: ClassVar[str] = os.getenv(
         "PGADMIN_DEFAULT_PASSWORD"
     )
-    UNIQUE: ClassVar[str] = "dvfdobfdonib"
 
 
 settings = Settings()

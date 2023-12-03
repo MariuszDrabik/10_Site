@@ -1,15 +1,13 @@
-from datetime import datetime
-from typing import Generic, Optional, TypeVar, Union
-from pydantic import UUID4, BaseModel, Field
-from pydantic.generics import GenericModel
+from typing import Optional
+from pydantic import UUID4, BaseModel, EmailStr, constr
 
 
 class UserSchema(BaseModel):
     id: Optional[UUID4] = None
     login: str
     name: str
-    email: str
-    password: str
+    email: EmailStr
+    password: constr(min_length=8, max_length=21)
 
 
 class UserDisplay(BaseModel):

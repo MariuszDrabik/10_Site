@@ -15,7 +15,7 @@ log = logging.getLogger("__name__")
 router = APIRouter(prefix="/users", tags=["users"])
 
 
-@router.get("/")
+@router.get("/", response_model=List[UserDisplay])
 async def get_many(db: SessionLocal = Depends(get_db)):
     log.info("Log informacjom")
     log.debug("A to debug")
@@ -27,7 +27,7 @@ async def get_many(db: SessionLocal = Depends(get_db)):
 async def made_user(
     user: UserSchema, db: SessionLocal = Depends(get_db)
 ) -> UserDisplay:
-    log.info(f"Post user {user} {UserSchema}")
+    log.info("Post user %s, %s", user, UserSchema)
     log.debug("A to debug")
     user = create_user(db, user)
     return user

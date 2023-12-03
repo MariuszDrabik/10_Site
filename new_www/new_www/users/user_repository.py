@@ -1,6 +1,7 @@
 from database.database import SessionLocal
 from users.user_model import User
 from users.user_schema import UserSchema
+from utils.hashing import Hash
 
 
 def get_users(db: SessionLocal):
@@ -15,7 +16,7 @@ def create_user(db: SessionLocal, user: UserSchema):
         name=user.name,
         email=user.email,
         login=user.login,
-        password=user.password,
+        password=Hash.hash_password(user.password),
     )
     db.add(user)
     db.commit()

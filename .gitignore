@@ -7,4 +7,5 @@ pg_database
 /pg_database
 .env
 db_pgdata
+logs/
 
