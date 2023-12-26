@@ -2,12 +2,22 @@ from database.database import SessionLocal
 from users.user_model import User
 from users.user_schema import UserSchema
 from utils.hashing import Hash
+from sqlalchemy import or_
 
 
 def get_users(db: SessionLocal):
     users = db.query(User).all()
 
     return users
+
+
+def has_user(db: SessionLocal, login, email):
+    user = (
+        db.query(User)
+        .where(or_(User.login == login, User.email == email))
+        .first()
+    )
+    return bool(user)
 
 
 def create_user(db: SessionLocal, user: UserSchema):

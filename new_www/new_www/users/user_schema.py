@@ -11,4 +11,6 @@ class UserSchema(BaseModel):
 
 
 class UserDisplay(BaseModel):
+    login: str
     name: str
+    email: str
