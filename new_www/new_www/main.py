@@ -6,7 +6,8 @@ from fastapi.staticfiles import StaticFiles
 from conf_dirs import ROOT_DIR
 from database.config import settings
 from database.database import POSTGRES_URL
-from users import user_routers
+from modules.articles import article_routers
+from modules.users import user_routers
 
 app = FastAPI()
 
@@ -18,6 +19,7 @@ app.mount(
 router = APIRouter()
 
 app.include_router(user_routers.router)
+app.include_router(article_routers.router)
 
 
 @app.get("/")

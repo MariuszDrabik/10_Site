@@ -2,7 +2,8 @@ from alembic import context
 from sqlalchemy import pool
 from sqlalchemy import engine_from_config
 from logging.config import fileConfig
-from users.user_model import User
+from modules.articles.article_model import Article
+from modules.users.user_model import User
 from database.database import Base
 
 # this is the Alembic Config object, which provides
