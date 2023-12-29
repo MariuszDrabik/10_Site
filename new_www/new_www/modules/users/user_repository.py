@@ -28,17 +28,12 @@ def get_user(db: SessionLocal, user_id: UUID):
     return user
 
 
-def has_user(db: SessionLocal, login, email):
-    user = (
-        db.query(User)
-        .where(or_(User.login == login, User.email == email))
-        .first()
-    )
-    return bool(user)
+def has_user(db: SessionLocal, login):
+    user = db.query(User).filter(User.login == login).first()
+    return user
 
 
 def create_user(db: SessionLocal, user: UserSchema):
-    print(user)
     user = User(
         name=user.name,
         email=user.email,
@@ -51,9 +46,7 @@ def create_user(db: SessionLocal, user: UserSchema):
     return user
 
 
-def update_user(
-    db: SessionLocal, user_id: UUID, user: UserSchema
-) -> User | HTTPException:
+def update_user(db: SessionLocal, user_id: UUID, user: UserSchema) -> User:
     user_update = db.query(User).filter_by(id=user_id)
     if not user_update.first():
         log.info("User with this id: {%s} not found", user_id)

@@ -16,11 +16,11 @@ class Hash:
 
 
 if __name__ == "__main__":
-    oko = "safdsdvsdf84564189165"
-    # check = Hash.hash_password(oko)
-    # print(check)
+    oko = "oko"
+    check = Hash.hash_password(oko)
+    print(check)
     print(
         Hash.check_password(
-            "$2b$12$U8Yy2SNpZgKl26mngx8TseYMKnkxOHoaGEosA03b6UkqAD5NHOwtG", oko
+            "$2b$12$njopbjZz2RU6Fa2AA3n5quJ44NbRmIwPjWmVA793XxumT8RrFmRhO", oko
         )
     )

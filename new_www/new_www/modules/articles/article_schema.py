@@ -15,8 +15,35 @@ class ArticleSchema(BaseModel):
     thumbnail: str
     abstract: str
     body: dict
+    author_id: Optional[UUID4] = None
+    published: bool
+
+
+class ArticlePatch(BaseModel):
+    title: str
+    slug: str
+    thumbnail: str
+    abstract: str
+    body: dict
     author_id: UUID4 | None
     published: bool
+
+
+class ArticleDisplay(BaseModel):
+    id: Optional[UUID4] = None
+    title: str
+    slug: str
+    thumbnail: str
+    abstract: str
+    body: dict
+    author_id: UUID4 | None
+    published: bool
+    date_created: datetime.datetime
+    published: bool
+
+    @field_serializer("date_created")
+    def serialize_dt(self, date_created: datetime):
+        return date_created.strftime("%d-%m-%Y")
 
 
 class ArticleLists(BaseModel):
@@ -24,6 +51,12 @@ class ArticleLists(BaseModel):
     title: str
     slug: str
     author: ShowUser
+    date_created: datetime.datetime
+    published: bool
+
+    @field_serializer("date_created")
+    def serialize_dt(self, date_created: datetime):
+        return date_created.strftime("%d-%m-%Y")
 
 
 class ArticleUserLists(BaseModel):
@@ -33,5 +66,5 @@ class ArticleUserLists(BaseModel):
     date_created: datetime.datetime
 
     @field_serializer("date_created")
-    def serialize_dt(self, date_created: datetime, _info):
+    def serialize_dt(self, date_created: datetime):
         return date_created.strftime("%d-%m-%Y")
