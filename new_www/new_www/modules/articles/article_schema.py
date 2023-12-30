@@ -14,7 +14,7 @@ class ArticleSchema(BaseModel):
     slug: str
     thumbnail: str
     abstract: str
-    body: dict
+    body: Optional[dict] = None
     author_id: Optional[UUID4] = None
     published: bool
 
@@ -35,8 +35,8 @@ class ArticleDisplay(BaseModel):
     slug: str
     thumbnail: str
     abstract: str
-    body: dict
-    author_id: UUID4 | None
+    body: Optional[dict] = None
+    author: ShowUser | None
     published: bool
     date_created: datetime.datetime
     published: bool

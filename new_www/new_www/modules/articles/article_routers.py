@@ -51,14 +51,14 @@ async def made_article(
     article: ArticleSchema,
     response: Response,
     db: SessionLocal = Depends(get_db),
-    token: str = Depends(oauth2_schema),
+    current_user: UserDisplay = Depends(get_current_user),
 ) -> ArticleDisplay:
     log.info("Post article")
 
-    user = post_article(db, article)
+    article = post_article(db, article)
 
     response.status_code = status.HTTP_201_CREATED
-    return user
+    return article
 
 
 @router.patch("/{article_id}", response_model=ArticleSchema)
@@ -73,7 +73,11 @@ async def update_one_user(
 
 
 @router.delete("/{article_id}", response_model=ArticleSchema)
-async def del_user(article_id: UUID, db: SessionLocal = Depends(get_db)):
+async def del_article(
+    article_id: UUID,
+    db: SessionLocal = Depends(get_db),
+    current_user: UserDisplay = Depends(get_current_user),
+):
     article = delate_article(db, article_id)
     log.info("User {%s} updated", article.title)
     return article

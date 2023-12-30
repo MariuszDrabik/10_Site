@@ -1,5 +1,6 @@
 import logging
 from uuid import UUID
+from sqlalchemy.exc import IntegrityError
 from database.database import SessionLocal
 from modules.articles.article_model import Article
 from modules.articles.article_schema import ArticlePatch, ArticleSchema
@@ -12,8 +13,12 @@ log = logging.getLogger("__name__")
 
 def post_article(db: SessionLocal, article: ArticleSchema):
     article = Article(**article.model_dump())
-    db.add(article)
-    db.commit()
+    try:
+        db.add(article)
+        db.commit()
+    except IntegrityError as e:
+        log.error("User exist, {%s}", e)
+        raise HTTPException(status_code=409, detail="Article exist") from e
     db.refresh(article)
     return article
 
