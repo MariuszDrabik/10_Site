@@ -9,3 +9,5 @@ pg_database
 db_pgdata
 logs/
 
+*/static/images/*
+*/obrazki/*
