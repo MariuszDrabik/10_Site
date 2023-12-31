@@ -2,6 +2,8 @@ from datetime import date
 import logging
 from logging.config import dictConfig
 
+from fastapi import Request
+
 
 LOG_LEVEL: str = "DEBUG"
 FORMAT: str = (
@@ -20,7 +22,7 @@ logging_config = {
             "()": "uvicorn.logging.DefaultFormatter",
             "format": FORMAT,
         },
-        "filr": {
+        "to_file": {
             "format": FORMAT_FILE,
         },
     },
@@ -33,7 +35,7 @@ logging_config = {
         },
         "file": {
             "class": "logging.handlers.RotatingFileHandler",
-            "formatter": "filr",
+            "formatter": "to_file",
             "filename": (
                 f"logs/{date.today().strftime('%Y-%m-%d')}-logconfig.log"
             ),
@@ -53,5 +55,4 @@ logging_config = {
 
 def set_logger():
     dictConfig(logging_config)
-
     logging.getLogger("__name__")

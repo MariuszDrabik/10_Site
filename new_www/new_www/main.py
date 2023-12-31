@@ -1,8 +1,8 @@
-import logging
 from typing import Dict
 import uvicorn
 from fastapi import APIRouter, FastAPI
 from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
 from conf_dirs import ROOT_DIR
 from database.config import settings
 from database.database import POSTGRES_URL
@@ -32,6 +32,16 @@ async def health_checker(test: str = "", test_2: str = "") -> Dict[str, str]:
     print(settings.POSTGRES_HOST)
     return {"message": f"Hello from FastAPI {test_2 or ''} {test}"}
 
+
+origins = ["http://localhost:3233"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 if __name__ == "__main__":
     uvicorn.run(

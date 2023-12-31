@@ -1,10 +1,10 @@
 import logging
 from uuid import UUID
-from modules.users.user_schema import UserDisplay
-from oauth.oauth2 import get_current_user, oauth2_schema
-from fastapi import APIRouter, Depends, Response, status
+from oauth.oauth2 import get_current_user
+from fastapi import APIRouter, Depends, Request, Response, status
 from core.log_conf import set_logger
 from database.database import SessionLocal, get_db
+from modules.users.user_schema import UserDisplay
 from modules.articles.article_repository import (
     delate_article,
     get_article,
@@ -24,26 +24,33 @@ set_logger()
 
 log = logging.getLogger("__name__")
 
-router = APIRouter(prefix="/articles", tags=["articles"])
+router = APIRouter(
+    prefix="/articles", tags=["articles"]
+)  # dependencies=[Depends(set_logger)]
 
 
 @router.get("/", response_model=list[ArticleLists])
-async def get_many_articles(db: SessionLocal = Depends(get_db)):
+async def get_many_articles(
+    request: Request, db: SessionLocal = Depends(get_db)
+):
     log.info("Log inform")
     log.debug("A to debug")
     articles = get_articles(db)
     return articles
 
 
-@router.get("/{article_slug}")  # , response_model=ArticleSchema)
+@router.get(
+    "/{article_slug}",
+    response_model=ArticleSchema,
+    dependencies=[Depends(get_current_user)],
+)
 async def get_one_article(
     article_slug: str,
     db: SessionLocal = Depends(get_db),
-    current_user: UserDisplay = Depends(get_current_user),
 ):
     article = get_article(db, article_slug)
     log.info("Get article {%s}", article.title)
-    return {"data": article, "current_user": current_user}
+    return article
 
 
 @router.post("/", response_model=ArticleDisplay)
@@ -72,12 +79,12 @@ async def update_one_user(
     return article
 
 
-@router.delete("/{article_id}", response_model=ArticleSchema)
-async def del_article(
-    article_id: UUID,
-    db: SessionLocal = Depends(get_db),
-    current_user: UserDisplay = Depends(get_current_user),
-):
+@router.delete(
+    "/{article_id}",
+    response_model=ArticleSchema,
+    dependencies=[Depends(get_current_user)],
+)
+async def del_article(article_id: UUID, db: SessionLocal = Depends(get_db)):
     article = delate_article(db, article_id)
     log.info("User {%s} updated", article.title)
     return article
