@@ -13,13 +13,18 @@ from modules.users.user_repository import (
     update_user,
 )
 from modules.users.user_schema import UserDisplay, UserSchema
+from oauth.oauth2 import get_current_user
 
 
 set_logger()
 
 log = logging.getLogger("__name__")
 
-router = APIRouter(prefix="/users", tags=["users"])
+router = APIRouter(
+    prefix="/users",
+    tags=["users"],
+    dependencies=[Depends(get_current_user)],
+)
 
 
 @router.get("/", response_model=list[UserDisplay])
@@ -31,7 +36,7 @@ async def get_many(db: SessionLocal = Depends(get_db)):
 
 
 @router.post("/", response_model=Union[UserDisplay, dict[str, str]])
-async def made_user(
+async def post_new_user(
     user: UserSchema,
     response: Response,
     db: SessionLocal = Depends(get_db),

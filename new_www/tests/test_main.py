@@ -10,7 +10,7 @@ def test_get_all_articles():
     assert response.status_code == 200
 
 
-def test_oauth_erroe():
+def test_oauth_error():
     response = client.post(
         "/token", data={"username": "kotki", "password": "pieski"}
     )

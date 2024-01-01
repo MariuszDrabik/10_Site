@@ -30,11 +30,8 @@ router = APIRouter(
 
 
 @router.get("/", response_model=list[ArticleLists])
-async def get_many_articles(
-    request: Request, db: SessionLocal = Depends(get_db)
-):
+async def get_many_articles(db: SessionLocal = Depends(get_db)):
     log.info("Log inform")
-    log.debug("A to debug")
     articles = get_articles(db)
     return articles
 
