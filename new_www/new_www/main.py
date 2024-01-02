@@ -9,7 +9,7 @@ from database.database import POSTGRES_URL
 from modules.articles import article_routers
 from modules.users import user_routers
 from modules.files import files_routers
-from oauth import authentication
+from oauth import authentication, admin
 
 app = FastAPI()
 
@@ -24,6 +24,7 @@ app.include_router(authentication.router)
 app.include_router(files_routers.router)
 app.include_router(user_routers.router)
 app.include_router(article_routers.router)
+app.include_router(admin.router)
 
 
 @app.get("/")

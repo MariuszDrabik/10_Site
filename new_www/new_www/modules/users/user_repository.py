@@ -78,3 +78,22 @@ def delate_user(db: SessionLocal, user_id: UUID) -> User:
     db.delete(user)
     db.commit()
     return user
+
+
+def create_admin(db: SessionLocal):
+    user = UserSchema(
+        login="Mario",
+        name="Mario",
+        email="drabik.mariusz@gmail.com",
+        password="okookooko",
+    )
+    user = User(
+        name=user.name,
+        email=user.email,
+        login=user.login,
+        password=Hash.hash_password(user.password),
+    )
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+    return user

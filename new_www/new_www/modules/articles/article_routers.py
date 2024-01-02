@@ -1,10 +1,9 @@
 import logging
 from uuid import UUID
 from oauth.oauth2 import get_current_user
-from fastapi import APIRouter, Depends, Request, Response, status
+from fastapi import APIRouter, Depends, Response, status
 from core.log_conf import set_logger
 from database.database import SessionLocal, get_db
-from modules.users.user_schema import UserDisplay
 from modules.articles.article_repository import (
     delate_article,
     get_article,
@@ -36,11 +35,7 @@ async def get_many_articles(db: SessionLocal = Depends(get_db)):
     return articles
 
 
-@router.get(
-    "/{article_slug}",
-    response_model=ArticleSchema,
-    dependencies=[Depends(get_current_user)],
-)
+@router.get("/{article_slug}", response_model=ArticleSchema)
 async def get_one_article(
     article_slug: str,
     db: SessionLocal = Depends(get_db),
@@ -50,12 +45,15 @@ async def get_one_article(
     return article
 
 
-@router.post("/", response_model=ArticleDisplay)
+@router.post(
+    "/",
+    response_model=ArticleDisplay,
+    dependencies=[Depends(get_current_user)],
+)
 async def made_article(
     article: ArticleSchema,
     response: Response,
     db: SessionLocal = Depends(get_db),
-    current_user: UserDisplay = Depends(get_current_user),
 ) -> ArticleDisplay:
     log.info("Post article")
 
@@ -65,7 +63,11 @@ async def made_article(
     return article
 
 
-@router.patch("/{article_id}", response_model=ArticleSchema)
+@router.patch(
+    "/{article_id}",
+    response_model=ArticleSchema,
+    dependencies=[Depends(get_current_user)],
+)
 async def update_one_user(
     article_id: UUID,
     article: ArticlePatch,
