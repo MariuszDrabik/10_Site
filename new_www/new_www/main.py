@@ -34,7 +34,7 @@ async def health_checker(test: str = "", test_2: str = "") -> Dict[str, str]:
     return {"message": f"Hello from FastAPI {test_2 or ''} {test}"}
 
 
-origins = ["http://localhost:3233"]
+origins = ["http://localhost:3233", "http://localhost:3333"]
 
 app.add_middleware(
     CORSMiddleware,

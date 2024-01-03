@@ -50,6 +50,7 @@ class ArticleLists(BaseModel):
     id: Optional[UUID4] = None
     title: str
     slug: str
+    thumbnail: str
     author: ShowUser
     date_created: datetime.datetime
     published: bool
